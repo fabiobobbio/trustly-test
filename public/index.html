@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css" type="text/css" />
+    <script src="./jquery/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" src="./bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <script>
+      $(function() {
+        'use strict';
+
+        var re = new RegExp("^(?:https?://.*github.com/)?([^/]+)/([^/]+)/?");
+        $('form').on('submit', function() {
+          var match = re.exec($('#project-url').val());
+          var user = match[1], repo = match[2];
+          location.href = '/' + user + '/' + repo;
+          return false;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span8 offset2">
+          <h1>Line Count GitHub project</h1>
+          <form>
+            <label for="project-url">Project URL</label>
+            <input id="project-url" name="project-url" class="span7" style="font-size: 1.5em; padding-left: 0.25em;" placeholder="Github repository" />    
+            <br/><input type="submit" class="span1 btn btn-primary" value="Count" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
