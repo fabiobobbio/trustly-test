@@ -1,24 +1,23 @@
 {
-  "name": "trustly-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./bin/dev-server",
-    "start": "node ./app.js"
+  "name": "line-count",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": "0.10.15"
   },
-  "keywords": [],
   "author": "Fabio Bobbio",
-  "license": "ISC",
   "dependencies": {
-    "async": "^3.2.0",
-    "buffered-reader": "^1.0.1",
-    "express": "^4.17.1",
+    "async": "0.2.x",
+    "buffered-reader": "1.0.x",
+    "express": "3.x",
     "mime": "^2.4.7",
-    "stream-splitter": "^0.3.2"
+    "stream-splitter": "0.2.x"
   },
   "devDependencies": {
-    "node-dev": "^6.2.0"
+    "node-dev": "2.x"
+  },
+  "scripts": {
+    "dev": "./bin/dev-server",
+    "start": "node ./app.js"
   }
 }

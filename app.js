@@ -10,7 +10,7 @@ server.listen(process.env.PORT || 8080);
 app.use(express.static(__dirname + '/public'));
 
 app.get('/:user/:repo', function(req, res) {
-  res.sendFile(__dirname + '/linecount.html');
+  res.sendfile(__dirname + '/linecount.html');
 });
 
 app.get('/:user/:repo/*', function(req, res) {

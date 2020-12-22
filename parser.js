@@ -82,7 +82,7 @@ var Parser = {
     var codeFileType = getCodeFileType(extension);
     if (codeFileType) {
       parseCodeFile(path, codeFileType, onSuccess);
-    } else if (mime.getType(path).indexOf("text/") == 0) {
+    } else if (mime.getType(path) == 0) {
       parseTextFile(path, onSuccess);
     } else {
       onSuccess(null);
